@@ -7,16 +7,23 @@ export default class IplBanner extends LightningElement {
 
     fileName='ipl2024stats.json'
     carouselList=[]
+    ipl2024StatsResponse=[]
+    leftStats=[]
+    rightStats=[]
     
-
     @wire(fetchCricketData, {
         fileName:'$fileName'
-    })ipl2023StatsHandler({data, error}){
+    })ipl2024StatsHandler({data, error}){
         if(data){
-            console.log("ipl2023StatsHandler data", data)
+            console.log("ipl2024StatsHandler data", data)
+            let prasedData = JSON.parse(data)
+            this.ipl2024StatsResponse = prasedData.stats
+            const half = Math.ceil(this.ipl2024StatsResponse.length/2)
+            this.leftStats = this.ipl2024StatsResponse.slice(0, half)
+            this.rightStats = this.ipl2024StatsResponse.slice(half)
         }
         if(error){
-            console.error("ipl2023StatsHandler error", error);
+            console.error("ipl2024StatsHandler error", error);
         }
     }
 
