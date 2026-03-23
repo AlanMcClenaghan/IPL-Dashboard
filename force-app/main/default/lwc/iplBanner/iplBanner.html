@@ -8,7 +8,18 @@
                 Left Stats
             </div>
             <div class="slds-col slds-size_6-of-12">
-                Center
+
+                <lightning-carousel>
+                    <template for:each={carouselList} for:item="item">
+                        <lightning-carousel-image
+                        key={item.year}
+                        src={item.url}
+                        alternative-text={item.altText}
+                       >
+                    </lightning-carousel-image>
+                    </template>         
+                </lightning-carousel>
+                
             </div>
             <div class="slds-col slds-size_3-of-12">
                 Right Stats
