@@ -11,8 +11,11 @@
                         <div class="name">{leader.PLAYER_NAME}</div>
                         <div class="value">{leader.KPIValue} {leader.label}</div>
                         <lightning-button
-                        variant="base"
-                        label="View Top 5"
+                            variant="base"
+                            label="View Top 5"
+                            data-filename={leader.KPIType}
+                            data-title={leader.title}
+                            onclick={clickHandler}
                         ></lightning-button>
                     </div>
                 </div>
