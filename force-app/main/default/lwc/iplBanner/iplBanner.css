@@ -27,12 +27,21 @@ h1{
     margin-bottom: 12px;
     font-size: 16px;
 }
+
 .stats-box h3{
     font-size: 36px;
 }
+
+.ipl-winner{
+    margin: auto;
+    display: block;
+    padding-bottom: 24px;
+}
+
 .blue-shade{
     background: linear-gradient(90deg, rgba(0,56,255,1) 0%, rgba(26,188,254,1) 100%);
 }
+
 .pink-shade{
     background: linear-gradient(90deg, rgba(139,35,61,1) 0%, rgba(198,22,141,1) 100%);
 }

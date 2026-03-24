@@ -3,9 +3,12 @@ import {loadStyle} from 'lightning/platformResourceLoader'
 import fetchCricketData from '@salesforce/apex/IplController.fetchCricketData'
 import IPL_Winners from '@salesforce/resourceUrl/IPL_Winners'
 import iplGlobalStyle from '@salesforce/resourceUrl/iplGlobalStyle'
+import winner2024 from '@salesforce/resourceUrl/winner2024'
+
 export default class IplBanner extends LightningElement {
 
     fileName='ipl2024stats.json'
+    winner = winner2024
     carouselList=[]
     ipl2024StatsResponse=[]
     leftStats=[]
